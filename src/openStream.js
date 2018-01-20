@@ -1,4 +1,4 @@
-const playVideo = requrie('./playVideo');
+const playVideo = require('./playVideo');
 
 function openStream(){
   navigator.mediaDevices.getUserMedia({ audio: false, video: true})
