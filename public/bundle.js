@@ -67,9 +67,9 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-const openCamera = __webpack_require__(1);
+const openStream = __webpack_require__(1);
 
-openCamera();
+openStream();
 
 console.log('Xin chao cac ban');
 
@@ -78,20 +78,15 @@ console.log('Xin chao cac ban');
 /* 1 */
 /***/ (function(module, exports) {
 
-function openCamera(){
+const playVideo = requrie('./playVideo');
+
+function openStream(){
   navigator.mediaDevices.getUserMedia({ audio: false, video: true})
-  .then(stream => {
-    const video = document.getElementById('localStream');
-    video.srcObject = stream;
-    video.onloadedmetadata  = function(){
-      video.play();
-    };
-  })
+  .then(stream => playVideo(stream, 'localStream'))
   .catch(err => console.log(err));
 }
 
-
-module.exports = openCamera;
+module.exports = openStream;
 
 
 /***/ })
