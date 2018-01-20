@@ -1,0 +1,12 @@
+{
+  "name": "stream2018",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/parkjaeha/stream2018.git",
+  "author": "qkrwogk110 <qkrwogk110@naver.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2"
+  }
+}
